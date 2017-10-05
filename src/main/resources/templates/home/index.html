@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Voter</title>
+</head>
+<body>
+	
+	<h1>Vote!</h1>
+	
+	
+		<table>
+		  <thead>
+		    <tr>
+		      <th>Project</th>
+			  <th>First Choice</th>
+			  <th>Second Choice</th>
+			  <th>Third Choice</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    {{#project}}
+		      <tr>
+		        <td>{{ name }}</td>
+		     <form action="post" method="/submit">
+		    <td><input type ="radio" name="firstChoice" value ={{project.id}}></td>
+		    <td><input type ="radio" name="secondChoice" value ={{project.id}}></td>
+		    <td><input type ="radio" name="thirdChoice" value ={{project.id}}></td>
+		       </form>
+		       </tr>
+		    {{/project}}
+		    
+		    
+		    
+		  </tbody>  
+		</table>
+	
+</body>
+</html>
